@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Güncelle";
+}
+@model GuncelleGonderiViewModel
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" enctype="multipart/form-data" asp-action="Guncelle">
+	<div class="mb-3">
+		<label class="form-label" asp-for="Baslik"></label>
+		<input class="form-control" asp-for="Baslik" type="text" />
+		<span class="text-danger mt-1" asp-validation-for="Baslik"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label" asp-for="Resim"></label>
+		<input class="form-control" type="file" asp-for="Resim" />
+		<span class="text-danger mt-1" asp-validation-for="Resim"></span>
+	</div>
+	<button class="btn btn-primary">Tamam</button>
+	<a class="btn btn-secondary" asp-controller="Home" asp-action="Index">İptal</a>
+</form>

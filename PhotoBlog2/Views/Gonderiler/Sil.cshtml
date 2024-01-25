@@ -1,0 +1,19 @@
+﻿@{
+	ViewData["Title"] = "Sil";
+}
+@model Gonderi
+
+<form method="post">
+	<div class="mb-4 shadow p-2 gonderiler">
+		<h4>@Model.Baslik</h4>
+		<img class="w-100" src="~/img/upload/@Model.ResimYolu" />
+		<input hidden asp-for="Id" />
+	</div>
+	<div class="mt-3 gonderiler">
+		<div>
+			Silmek istediğinize emin misiniz?
+		</div>
+		<button class="btn btn-danger">Sil</button>
+		<a class="btn btn-secondary" asp-controller="Home" asp-action="Index">İptal</a>
+	</div>
+</form>
